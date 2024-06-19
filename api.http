@@ -1,0 +1,69 @@
+####### Event
+
+GET http://localhost:3000/events
+
+###
+# @name createEvent
+POST http://localhost:3000/events
+Content-Type: application/json
+
+{
+    "name": "New Event",
+    "description": "This is a new event",
+    "date": "2017-01-01 08:00:00",
+    "price": 100
+}
+
+###
+@eventId = {{ createEvent.response.body.id }}
+
+###
+GET http://localhost:3000/events/{{ eventId }}
+
+###
+PATCH http://localhost:3000/events/{{ eventId }}
+Content-Type: application/json
+
+{
+    "name": "New Event t",
+    "description": "This is a new event t",
+    "date": "2017-01-02 08:00:00",
+    "price": 130
+}
+
+###
+DELETE http://localhost:3000/events/{{ eventId }}
+
+
+####### SPOT
+
+GET http://localhost:3000/events/{{ eventId }}/spots
+
+###
+# @name createSpot
+POST http://localhost:3000/events/{{ eventId }}/spots
+Content-Type: application/json
+
+{
+    "name": "New Spot2"
+}
+
+###
+@spotId = {{ createSpot.response.body.id }}
+
+###
+GET http://localhost:3000/events/{{ eventId }}/spots/{{ spotId }}
+
+###
+PATCH http://localhost:3000/events/{{ eventId }}/spots/{{ spotId }}
+Content-Type: application/json
+
+{
+    "name": "New Event",
+    "description": "This is a new event",
+    "date": "2017-01-01 08:00:00",
+    "price": 100
+}
+
+###
+DELETE http://localhost:3000/events/{{ eventId }}/spots/{{ spotId }}
