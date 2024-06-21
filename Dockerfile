@@ -2,9 +2,9 @@ FROM node:22-slim
 
 RUN apt update && apt install -y openssl procps
 
-RUN npm install -g @nestjs/cli@10.3.2
+RUN npm install -g @nestjs/cli@10.3.2 @prisma/client
 
-WORKDIR /home/node/ap
+WORKDIR /home/node/app
 
 USER node
 
