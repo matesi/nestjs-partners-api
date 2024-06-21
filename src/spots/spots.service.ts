@@ -42,7 +42,7 @@ export class SpotsService {
     return this.prismaService.spot.update({
       where: { id: spotId, eventId },
       data: updateSpotDto,
-    })
+    });
   }
 
   remove(eventId: string, spotId: string) {
