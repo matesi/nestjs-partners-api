@@ -25,9 +25,9 @@ PATCH http://localhost:3000/events/{{ eventId }}
 Content-Type: application/json
 
 {
-    "name": "New Event t3",
-    "description": "This is a new event t",
-    "date": "2017-01-02 08:00:00",
+    "name": "New Event t4",
+    "description": "This is a new event t4",
+    "date": "2017-01-03 08:00:00",
     "price": 130
 }
 
@@ -45,7 +45,7 @@ POST http://localhost:3000/events/{{ eventId }}/spots
 Content-Type: application/json
 
 {
-    "name": "New Spot6"
+    "name": "New Spot7"
 }
 
 ###
