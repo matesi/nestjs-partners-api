@@ -8,5 +8,5 @@ WORKDIR /home/node/app
 
 USER node
 
-CMD npx prisma migrate dev && npm run start dev && tail -f /dev/null
+CMD npx prisma migrate dev && npm run start:prod && tail -f /dev/null
 #CMD npx prisma migrate dev && tail -f /dev/null
